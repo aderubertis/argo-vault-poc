@@ -8,6 +8,6 @@ spec:
     app: nginx
   ports:
     - protocol: TCP
-      port: 80
-      targetPort: 8001
+      port: 8001
+      targetPort: 80
   type: ClusterIP
