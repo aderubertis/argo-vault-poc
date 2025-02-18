@@ -21,11 +21,11 @@ spec:
         ports:
           - containerPort: 80
         env:
-          - name: SECRET_TOKEN
+          - name: token
             valueFrom:
               secretKeyRef:
                 name: app-demo-secret
-                key: SECRET_TOKEN
+                key: token
         volumeMounts:
         - name: nginx-html
           mountPath: /usr/share/nginx/html
