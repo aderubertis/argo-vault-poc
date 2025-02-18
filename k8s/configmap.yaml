@@ -12,6 +12,5 @@ data:
     <body>
       <h1>Hello there!</h1>
       <p>This page is coming from a ConfigMap. It contains a super password: <path:argocd/data/app-demo#password></p>
-      <p>And the secret token is ${token}</p>
     </body>
     </html>
