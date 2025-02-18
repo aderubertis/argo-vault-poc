@@ -27,3 +27,6 @@ spec:
       - name: nginx-html
         configMap:
           name: nginx-config
+      - name: secret-volume
+        secret:
+          secretName: app-demo-secret
