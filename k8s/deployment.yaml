@@ -19,7 +19,13 @@ spec:
       - name: nginx
         image: nginx:latest
         ports:
-        - containerPort: 80
+          - containerPort: 80
+        env:
+          - name: SECRET_TOKEN
+            valueFrom:
+              secretKeyRef:
+                name: app-demo-secret
+                key: SECRET_TOKEN
         volumeMounts:
         - name: nginx-html
           mountPath: /usr/share/nginx/html
@@ -27,6 +33,3 @@ spec:
       - name: nginx-html
         configMap:
           name: nginx-config
-      - name: secret-volume
-        secret:
-          secretName: app-demo-secret
