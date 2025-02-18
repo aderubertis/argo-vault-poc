@@ -11,6 +11,6 @@ data:
     <head><title>Secret Management PoC</title></head>
     <body>
       <h1>Hello there!</h1>
-      <p>This page is coming from a ConfigMap and contains a super password: ThisIsTheCTOPassword</p>
+      <p>This page is coming from a ConfigMap and contains a super password: <path:argocd/data/app-demo#password></p>
     </body>
     </html>
